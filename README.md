@@ -15,3 +15,25 @@ Java-Interviewfragen
 8. Welche Versionverwaltung nutzt ihr - Github, gitlab etwas anderes?
 
 </details>
+
+# Java und OOP
+
+<details>
+    <summary>Was sind die Unterschiede zwischen JDK und JRE?  </summary>
+JRE(Java Runtime Enviroment) ist die Lauftzeitumgebung, die notwendig ist, um eine Java Anwendung auszuführen.
+    Sie enthält die Java-Bibliotheken, die JVM(Java Virtual Machine)  sowie weitere Komponenten, die zur Ausführung von Java-Programmen
+    erforderlich sind.
+
+JDK(Java Development Kit) ist das Softwarepaket, das benötigt wird, um Java-Anwendungen zu entwickeln.
+    Es enthält Werkzeuge wie den Compiler(javac), mit dem .java-Dateien .class-Dateien kompiliert werden können.
+    Das JDK beinhaltet die JVM, JRE und zusätzliche Entwickler-Tools.  
+</details>
+<details> <summary>Was bedeuten die Konzepte 'super' und 'this' in Java?
+</summary>
+
+1. **super**: wird in einer Unterklasse verwendet, um auf Methoden oder Variablen der Oberklasse    zuzugreifen. Mit super
+    kann man innerhalb der Unterklassse explizit die Implementierungen der Oberklasse ansprechen, z.B. beim Überschreiben von Methoden.
+2. **this**: wird verwendet, um auf das aktuelle Objekt der Klasse zuzugreifen. Besonders nützlich ist this, wenn lokale Parameter den gleichen Namen 
+    wie Instanzvariablen haben - this hilft dabei,zwischen ihnen zu unterscheiden.
+
+</details>
