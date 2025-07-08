@@ -37,3 +37,14 @@ JDK(Java Development Kit) ist das Softwarepaket, das benötigt wird, um Java-Anw
     wie Instanzvariablen haben - this hilft dabei,zwischen ihnen zu unterscheiden.
 
 </details>
+
+<details> <summary>Was ist der Unterschied zwischen **equals** und **==** in Java?
+</summary>
+
+-  **equals**: ist eine Methode, die den Inhalt bzw. den Wert zweier Objekte vergleicht. 
+Zum Beispiel: Zwei verschiedene String-Objekte mit dem gleichen Text liefern bei **equals()**
+den Wert **true**.
+- **==**: ist ein **Operator**, der überprüft, ob zwei Referenzen auf dasselbe Objekt im Speicher zeigen.Das bedeutet: Auch wenn zwei Objekte den gleichen Inhalt haben, liefert **==** nur dann
+**true**, wenn sie dieselbe Speicheradresse haben.
+
+</details>
