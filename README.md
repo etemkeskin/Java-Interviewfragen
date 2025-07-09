@@ -48,3 +48,30 @@ den Wert **true**.
 **true**, wenn sie dieselbe Speicheradresse haben.
 
 </details>
+
+<details> <summary>Was sind die Unterschiede zwischen **Abstrakte Klassen** und **Interfaces** in Java?
+</summary>
+
+-  **Abstrakte Klasse**: wird verwndet, wenn Klassen gemeinsame Funktionalität (Code) teilen sollen. Sie kann sowohl abstrakte als auch konkrete Methoden enthalten. 
+
+- **Interface**: dient der reinen Schnittstellendefinition. Beschreibt nur, was eine Klasse tun soll, nicht wie. Seit Java 8 können Interfaces auch deafult und static Methoden enthalten. Eine Klasse kann mehrere Interfaces implementieren. 
+</details>
+
+<details> <summary>Public, Private, Default und Protected - Zugriffsmodifizierer in Java?
+</summary>
+
+-  **public**: die Variable oder Methode ist für alle Klassen, auch aus anderen Paketen, ist sichtbar. 
+
+- **private**: kein Zugriff von außen oder von Unterklassen - nur innerhalb der gleichen Klasse.
+- **default**:wir kein Modifizierer angegeben, gilt dieser Standartzugriff. Andere paketehaben keinen Zugriff.
+- **protected**: Zugänglich für Unterklassen und Klassen imselben Paket   
+</details>
+
+<details> <summary>Was sind die Prinzipien der objektorientierten Architektur?
+</summary>
+
+- **Encapsulation(Datenkapselung)**: 
+- **Inheritance(Vererbung)**: 
+- **Polymorphism(Polymorphie/Vielgestaltigkeit)**:
+- **Abstraction(Abstraktion)**: 
+</details>
