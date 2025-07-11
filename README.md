@@ -70,8 +70,48 @@ den Wert **true**.
 <details> <summary>Was sind die Prinzipien der objektorientierten Architektur?
 </summary>
 
-- **Encapsulation(Datenkapselung)**: 
-- **Inheritance(Vererbung)**: 
-- **Polymorphism(Polymorphie/Vielgestaltigkeit)**:
-- **Abstraction(Abstraktion)**: 
+- **Encapsulation(Datenkapselung)**: Dia Kapselung bedeutet, dass Daten(Attribute) und Funktionen(Methoden) , die zu einem Objekt gehören,
+zusammengefasst und vor dem direkten Zugriff von außen geschützt werden. So wird sichergestellt, dass Daten nur über definierte Schnittstellen werden können. Dies erhöht die Sicherheit und Wartbarkeit des Codes.
+- **Inheritance(Vererbung)**: Die Vererbung erlaubt es, dass eine Klasse Eigenschaften und Methoden einer anderen Klasse erbt. Dadurch wird Code-Wiederverwendung möglich und es entstehen Beziehungen zwischen Klassen. Die untergeordnete Klasse(Subklasse) kann die Eihenschaften der übergeordneten Klasse(Superklasse) verwenden und bei Bedarf erweitern.
+- **Polymorphism(Polymorphie/Vielgestaltigkeit)**: Polymorphie bedeutet, dass eine Methode in verschidenen Klasse unterschiedlich implementiert werden kann, obwohl sie denselben Namen hat. So kann ein Objekt je nach Typ unterschiedliches Verhalten zeigen.
+- **Abstraction(Abstraktion)**: Die Abstraktion, dass komplexe Details verborgen und nur die wesentlichen Informationen offengelegt werden.Dadurch wird die Abhängigkeit zwischen den Komponenten reduziert und der Code übersichtlicher.
+</details>
+
+<details> <summary>Was ist Methodenüberladungund Methodenüberschreibung in Java?
+</summary>
+
+-  **Method Overloading(Methodüberladung)**: die Methodeüberladung bedeutet, dass innerhalb einer Klasse mehrere Methodenmit dem gleichen
+Namen, aber unterschiedlicher Parameterliste(Anzahl oder Typ der Parameter)  definiert werden.
+```java
+public class Rechner {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+
+- **Method Overriding(Methodüberschreiben)**: Die Methodüberschreibung, dass eine Unterklasse eine Methodeder Oberklasse mit dem gleichen Methodnamen, Parametern und Rückgabewert neu definiert, um das Verhalten anzupassen.
+```java
+class Tier {
+    void macheGeräusch() {
+        System.out.println("Ein Tier macht ein Geräusch");
+    }
+}
+
+class Hund extends Tier {
+    @Override
+    void macheGeräusch() {
+        System.out.println("Der Hund bellt");
+    }
+}
+
+```
 </details>
