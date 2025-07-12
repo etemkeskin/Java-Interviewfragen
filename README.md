@@ -49,7 +49,7 @@ den Wert **true**.
 
 </details>
 
-<details> <summary>Was sind die Unterschiede zwischen **Abstrakte Klassen** und **Interfaces** in Java?
+<details> <summary>Was sind die Unterschiede zwischen Abstrakte Klassen und Interfaces in Java?
 </summary>
 
 -  **Abstrakte Klasse**: wird verwndet, wenn Klassen gemeinsame Funktionalität (Code) teilen sollen. Sie kann sowohl abstrakte als auch konkrete Methoden enthalten. 
@@ -77,7 +77,7 @@ zusammengefasst und vor dem direkten Zugriff von außen geschützt werden. So wi
 - **Abstraction(Abstraktion)**: Die Abstraktion, dass komplexe Details verborgen und nur die wesentlichen Informationen offengelegt werden.Dadurch wird die Abhängigkeit zwischen den Komponenten reduziert und der Code übersichtlicher.
 </details>
 
-<details> <summary>Was ist Methodenüberladungund Methodenüberschreibung in Java?
+<details> <summary>Was ist Methodenüberladung und Methodenüberschreibung in Java?
 </summary>
 
 -  **Method Overloading(Methodüberladung)**: die Methodeüberladung bedeutet, dass innerhalb einer Klasse mehrere Methodenmit dem gleichen
@@ -112,6 +112,54 @@ class Hund extends Tier {
         System.out.println("Der Hund bellt");
     }
 }
+
+```
+</details>
+
+<details> <summary>Was sind static und final in Java und wo werden sie verwendet?
+</summary>
+
+**static**: Das **static**- Schlüsselwort wird verwendet, um anzugeben, dass eine Variable oder Methode zur Klasse gehört und nicht zu einer bestimmten Instanz(Object) der Klasse.
+- **Static-Variablen**: gehören zur Klasse und werden von allen Objekten gemeinsam genutzt. Es gibt nur Kopie der Variable - unabhängigvon der Anzahl der Objekte.
+-  **Static-Methoden**: Können ohne Objeckt direkt über den Klassennamen aufgerufen werden. Sie dürfen nich auf nicht-statische(instanzbezogene) Variablen oder Methoden zugreifen, da sie nicht wissen, welches Objekt gemeint ist. 
+```java
+public class Auto {
+    static int anzahlAutos = 0;  // Klassenvariable
+
+    public Auto() {
+        anzahlAutos++;
+    }
+
+    static void zeigeAnzahl() { // Klassenmethode
+        System.out.println("Anzahl Autos: " + anzahlAutos);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Auto auto1 = new Auto();
+        Auto auto2 = new Auto();
+        Auto.zeigeAnzahl(); // Ausgabe: Anzahl Autos: 2
+    }
+}
+```
+
+
+**final**: Das **final**-Schlüsselort wird verwendet, um anzugeben, dass etwas nicht verändert werden darf, nachdem es einmal gesetzt oder deklariert wurde.(Klass, Method oder Variable)
+- **final** Klassen können keine Unterklassen haben.
+- **final** Methoden können nicht von Unterklassen überschrieben werden.
+```java
+public class Kreis {
+    final double PI = 3.14159;  // Konstante
+
+    double berechneUmfang(double radius) {
+        return 2 * PI * radius;
+    }
+}
+
+ final class FinalClass {
+       // ...
+   }
 
 ```
 </details>
