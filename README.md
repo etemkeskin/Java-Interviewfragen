@@ -163,3 +163,16 @@ public class Kreis {
 
 ```
 </details>
+
+<details> <summary>Unterschied zwischen Set, Map und Arraylist in Java?
+</summary>
+
+- **Datenreihenfolge**: Eine **ArrayList** speichert die Elemente, in der sie hinzugefügt wurden, und erlaubt doppelte Elemente. Ein **Set** speichert die Elemente ungeordnet und ohne Duplikate. Eine **Map** speichert Schlüssel-Wert-Paare, wobeijeder Schlüssel nur einmalvorkommen darf.
+
+- **Zugriff auf Elemente**: In einer **ArrayList** erfolgt der Zugriff über Indexnummern(z.B. list.get(0)). Bei **Set** und **Map** erfolgt der Zugriff über den Schlüssel bzw. über die enthaltenen Objekte selbst.De jeder Schlüssel in einer **Map** eindeutig ist, ist der Zugriff in der Regel sehr schnell.  
+- **Doppelte Einträge**: **ArrayList** erlaubt mehrfache Vorkommen desselben Elements. **Set** und **Map** hingegen verhindern doppelte Einträge - ein Element bzw. ein Schlüssel kann nur einmal vorhanden sein.
+- **Leistung(Performance)**: Beim Hinzufügen und Entfernen von Elementen ist **ArrayList** oft schneller,da keine Prüfung auf Duplikate oder Schlüssel erfolgen muss. Beim Zugriff auf Elemente sind **Set** und besonders **Map oft schneller**, da sie Schlüssel-basierte Datenstrukturen nutzen und so den direkten Zugriff ermöglichen.
+</details>
+
+<details> <summary>Was sind die Prinzipien der objektorientierten Architektur?
+</summary>
