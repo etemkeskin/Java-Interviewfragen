@@ -173,6 +173,3 @@ public class Kreis {
 - **Doppelte Einträge**: **ArrayList** erlaubt mehrfache Vorkommen desselben Elements. **Set** und **Map** hingegen verhindern doppelte Einträge - ein Element bzw. ein Schlüssel kann nur einmal vorhanden sein.
 - **Leistung(Performance)**: Beim Hinzufügen und Entfernen von Elementen ist **ArrayList** oft schneller,da keine Prüfung auf Duplikate oder Schlüssel erfolgen muss. Beim Zugriff auf Elemente sind **Set** und besonders **Map oft schneller**, da sie Schlüssel-basierte Datenstrukturen nutzen und so den direkten Zugriff ermöglichen.
 </details>
-
-<details> <summary>Was sind die Prinzipien der objektorientierten Architektur?
-</summary>
