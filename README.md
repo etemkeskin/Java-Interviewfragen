@@ -173,3 +173,10 @@ public class Kreis {
 - **Doppelte Einträge**: **ArrayList** erlaubt mehrfache Vorkommen desselben Elements. **Set** und **Map** hingegen verhindern doppelte Einträge - ein Element bzw. ein Schlüssel kann nur einmal vorhanden sein.
 - **Leistung(Performance)**: Beim Hinzufügen und Entfernen von Elementen ist **ArrayList** oft schneller,da keine Prüfung auf Duplikate oder Schlüssel erfolgen muss. Beim Zugriff auf Elemente sind **Set** und besonders **Map oft schneller**, da sie Schlüssel-basierte Datenstrukturen nutzen und so den direkten Zugriff ermöglichen.
 </details>
+
+<details> <summary>Was ist der Unterschied zwischen einer ArrayList und einer LinkedList in Java?
+</summary>
+
+**`ArrayList`** ist eignet sich besser für Indexbasierten Zugriff und sequentielle Datenspeicherung, während **`LinkedList`** besser für dynamische Einfüge- Löschvorgänge geeignet ist. 
+
+</details>
