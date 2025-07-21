@@ -180,3 +180,55 @@ public class Kreis {
 **`ArrayList`** ist eignet sich besser für Indexbasierten Zugriff und sequentielle Datenspeicherung, während **`LinkedList`** besser für dynamische Einfüge- Löschvorgänge geeignet ist. 
 
 </details>
+
+<details> <summary>Funktionweise von HashMap in Java
+</summary>
+
+Eine **`HashMap`** ist eine Sammlung von Schlüssel-Wert-Paaren(Key-Value-Pairs). Jeder Schlüssel (Key) key muss eindeutig sein und einem bestimmten Wert zugeordnet. 
+
+- Wenn ein Schlüssel in die **HashMap** eingefügt wird, berechnet Java  mithilfe der Methode **hashCode()** einen **Hash-Wert** für diesen Schlüssel.
+- Dieser Hash-Wert bestimmt, in welchem **Bucket**(Speicherplatz) das Object gespeichert wird.
+- Wenn mehrere Schlüsssel denselben Hash-Wert liefern(Kollision), speichert die **HashMap** sie in einer **Verketten Liste(Linked List)** im gleichen Bucket.
+- Um zu überprüfen, ob zwei Schlüssel gelch sind, wird die Methode **equals()** verwendet. 
+
+**Zugriff auf ein Element**: Beim Zugriff auf einen Wert
+- 1. Die **HashMap** berechnet den Hash-Wert des übergebenen Schlüssels mit **hashCode()**
+- 2. Sie springt direkt zum entsprechenden Bucket
+- 3. Dort prüft sie mit **equals()**, welcher Eintrag dem gesuchen Schlüssel entspricht.
+
+**Bedeutung von equals() und hashCode()**:
+
+**equals()**: Vergleicht, ob zwei Objekte inthaltlich gleich sind und wird in **HashMap** verwendet, um zu prüfen, ob ein vorhandener Schlüssel geleich dem gesuchten ist.
+
+**hashCode()** gibt eine ganzzahlige Repräsentation(Hash-Wert) einse Objekt zurück. Es wird  verwendet, um die Position des Schlüssel in der **HashMap** zu bestimmen
+
+```java
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Person person = (Person) o;
+    return Objects.equals(name, person.name);
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(name);
+}
+
+
+```
+</details>
+
+<details> <summary>Warum müssen equals() und hashCode() zusammen überschrieben werden?
+</summary>
+
+Wenn man nur **equals** überschreibt, aber nicht **hashCode()**, kann folgendes passieren:
+
+- Zwei Schlüssel, die inthaltlich gleich sind (equals() gibt true zurück), liefern unterschiedliche Hash-Werte, sie landen in verschiedenen Buckets.
+- Dadurch kann es passieren, dass die **HashMap** das Objekt nicht findet, obwohl es vorhanden ist.
+
+Daher gilt dir Regel:
+Wenn man **equals()** überschreibt, muss man auch hashCode() konsistent überschreiben.
+
+</details>
